@@ -11,8 +11,7 @@ class AmericanOptionModel(OptionModel):
     super(AmericanOptionModel, self).__init__(**kwargs)
 
   def payoff(self, S):
-    v = self.K - S
-    return v if v > 0 else 0
+    pass
 
   def generate(self, grid):
     Nt = len(grid.series["t"])
@@ -31,7 +30,7 @@ class AmericanOptionModel(OptionModel):
       P[0][iS] = self.payoff(grid.series["S"][iS])
       if P[0][iS] <= 0.:
         break
-      #free boundary vector
+    #free boundary vector
     fb = [self.K]
     free_bdry = iS
     for i in xrange(1, Nt):

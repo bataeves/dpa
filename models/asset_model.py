@@ -84,5 +84,3 @@ class AssetModel(BaseModel):
     #the diffusion function must be non-negative in it's domain.
   def diffusion(self, x, t):
     return x * self.volatility(S=x, t=t)
-
-

@@ -2,9 +2,9 @@ __author__ = 'bataev'
 from grids.uniform_grid import UniformGrid
 from models.american_option_model import AmericanOptionModel
 from models.asset_model import AssetModel
-import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 grid = UniformGrid(series=[
     ("t", 0.0, 2.0, 200),
